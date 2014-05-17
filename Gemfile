@@ -48,17 +48,26 @@ gem 'sass'
 group :development, :test do
   gem 'rspec-rails'
   gem 'selenium-webdriver'
-  gem 'capybara'
   gem 'launchy'
 end
 
 
 group :test do
-  gem 'database_cleaner'
+  gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'cucumber-rails', '1.4.0', :require => false
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
+  gem 'guard-rspec', '2.5.0'
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.0'
 end
 
-
+gem "rspec-rails", :group => [:development, :test]
+gem 'growl', '1.0.3'
+gem 'capybara'
+gem 'faker', '1.1.2'
+gem 'sprockets', '2.11.0'
