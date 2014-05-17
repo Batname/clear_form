@@ -1,0 +1,61 @@
+<h1>Listing uploads</h1>
+
+<table id='uploads'>
+  <tr>
+    <th>Subject</th>
+    <th>Body</th>
+    <th>Attachment</td>
+    <th>Other Attachment</td>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <%= render @uploads %>
+</table>
+
+<br />
+
+<%= render 'new_upload_links' %>
+
+
+<hr>
+<div id="formid" style="display: none"><%= image_tag ("loading.jpg") %></div>
+<%= form_for(@upload, :remote => (params[:action] == 'index' ? true : false)) do |f| %>
+    <% if @upload.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@upload.errors.count, "error") %> prohibited this upload from being saved:</h2>
+
+          <ul>
+            <% @upload.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <fieldset>
+      <legend class='required'>
+        BAT FORM!!
+      </legend>
+      <div class="field">
+        <%= f.label :name, :class => 'required' %><br />
+        <%= f.text_field :name, :required => true %>
+      </div>
+      <div class="field">
+        <%= f.label :email, :class => 'required' %><br />
+        <%= f.text_field :email, :required => true %>
+      </div>
+      <div class="field">
+        <%= f.label :massage, :class => 'required' %><br />
+        <%= f.text_area :massage, :required => true %>
+      </div>
+      <div class="field">
+        <%= f.label :attachment %><br />
+        <%= f.file_field :attachment %>
+      </div>
+    </fieldset>
+    <div class="actions">
+      <%= f.submit :data => {:'disable-with' => "Submitting..."} %>
+    </div>
+<% end %>

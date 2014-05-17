@@ -1,0 +1,9 @@
+<tr class='upload' id='upload-<%= upload.id %>'>
+  <td><%= upload.name %></td>
+  <td><%= upload.email %></td>
+  <td><%= link_to upload.attachment_file_name, upload.attachment.url if upload.attachment? %></td>
+  <td><%= link_to upload.other_attachment_file_name, upload.other_attachment.url if upload.other_attachment? %></td>
+  <td><%= link_to 'Show', upload %></td>
+  <td><%= link_to 'Edit', edit_upload_path(upload) %></td>
+  <td><%= link_to 'Destroy', upload, :data => {:confirm => 'Are you sure?'}, :method => :delete, :remote => true %></td>
+</tr>

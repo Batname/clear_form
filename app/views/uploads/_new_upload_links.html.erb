@@ -1,0 +1,5 @@
+<div id='new-upload-links'>
+  <%= link_to 'New upload', new_upload_path, :remote => true, :'data-type' => 'html', :id => 'new-upload-link' %>
+  <br />
+  <%= link_to 'New upload with Attachment', new_upload_path(:attachment => true), :remote => true, :'data-type' => 'html', :id => 'new-upload-attachment-link' %>
+</div>

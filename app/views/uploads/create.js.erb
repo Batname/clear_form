@@ -1,0 +1,24 @@
+<%= remotipart_response do %>
+<% unless @upload.errors.any? %>
+$('#uploads').append( '<%= escape_javascript(
+      render @upload
+    ) %>' );
+$('#new-upload-form-container').find('input:not(:submit),select,textarea').val('');
+<% if request.put? %>
+$('#uploads').after('PUT request!');
+<% end %>
+<% else %>
+var $form = $('#new_upload'),
+        $errorDiv = $('<div id="error_explanation">'),
+        $errorList = $('<ul>');
+<% @upload.errors.full_messages.each do |msg| %>
+$errorList.append('<li><%= escape_javascript msg %></li>');
+<% end %>
+$form.find('#error_explanation').remove();
+$form.prepend($errorDiv.append($errorList));
+<% end %>
+<% end %>
+
+
+$('form#new_comment').hide().delay( 2000 ).fadeIn(1000);
+$('div#formid').show().delay( 1500 ).fadeOut(1000);;
