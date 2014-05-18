@@ -1,4 +1,9 @@
 class Upload < ActiveRecord::Base
+
+
+  after_save :email_confirmation
+
+
   do_not_validate_attachment_file_type :attachment
 
   has_attached_file :attachment
@@ -6,5 +11,9 @@ class Upload < ActiveRecord::Base
   validates :name, :email, :massage, :presence => true
 
   # validates_attachment_content_type :attachment, :content_type => /\Aimage\/.*\Z/
+
+  def email_confirmation
+    UploadMailer.user_uploads(self).deliver
+  end
 
 end
