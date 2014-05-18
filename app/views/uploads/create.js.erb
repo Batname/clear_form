@@ -1,8 +1,12 @@
+<% if @upload.new_record? %>
+$('input#upload_name').effect('highlight', { color: 'red' });
+<% end %>
+
+
+
 <%= remotipart_response do %>
 <% unless @upload.errors.any? %>
-$('#uploads').append( '<%= escape_javascript(
-      render @upload
-    ) %>' );
+$('#uploads').append('<%= escape_javascript(render @upload ) %>');
 $('#new-upload-form-container').find('input:not(:submit),select,textarea').val('');
 <% if request.put? %>
 $('#uploads').after('PUT request!');
@@ -20,5 +24,5 @@ $form.prepend($errorDiv.append($errorList));
 <% end %>
 
 
-$('form#new_comment').hide().delay( 2000 ).fadeIn(1000);
-$('div#formid').show().delay( 1500 ).fadeOut(1000);;
+$('form#new_comment').hide().delay(2000).fadeIn(1000);
+$('div#formid').show().delay(1500).fadeOut(1000);;

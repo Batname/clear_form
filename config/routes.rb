@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   match 'uploads' => 'uploads#create', :via => [:put]
   resources :uploads
+  post ':controller/validate', action: 'validate', as: :validate_form
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

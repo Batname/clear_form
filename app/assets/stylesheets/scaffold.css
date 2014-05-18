@@ -18,6 +18,7 @@ a:hover { color: #fff; background-color:#000; }
 
 div.field, div.actions {
   margin-bottom: 10px;
+  padding-left: 220px;
 }
 
 #notice {
@@ -63,3 +64,4 @@ label.required:after {
   font-size: 12px;
   list-style: square;
 }
+

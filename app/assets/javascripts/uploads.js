@@ -26,3 +26,9 @@ $(document)
     $('#uploads').after('Error status code: ' + xhr.status + ', Error status message: ' + statusText);
   });
 
+
+
+
+$(document).ready(function () {
+
+});

@@ -20,4 +20,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      upload:
+        email: "Email"
+        name: "Name"
+    errors:
+      models:
+        upload:
+          attributes:
+            email:
+              blank: "обязательна"
+              taken: "уже добавлена в список рассылки"
+              invalid: "имеет странный формат"
+            name:
+              blank: "должна быть в диапазоне от 1 до 7 включительно"

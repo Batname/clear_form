@@ -71,3 +71,6 @@ gem 'growl', '1.0.3'
 gem 'capybara'
 gem 'faker', '1.1.2'
 gem 'sprockets', '2.11.0'
+
+
+gem 'jquery-validation-rails'

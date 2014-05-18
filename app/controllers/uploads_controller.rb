@@ -3,6 +3,17 @@ class UploadsController < ApplicationController
   respond_to :js, :only => [:create, :update, :destroy]
   # GET /upload
   # GET /upload.xml
+
+
+  def validate
+    upload = Upload.new(upload_params)
+    validator(upload)
+    respond_to do |format|
+      format.json { render json: @errors }
+    end
+  end
+
+
   def index
     @uploads = Upload.all
     @upload = Upload.new
