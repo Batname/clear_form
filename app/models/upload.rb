@@ -1,7 +1,6 @@
 class Upload < ActiveRecord::Base
 
-
-  #after_save :email_confirmation
+  after_save :email_confirmation
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 

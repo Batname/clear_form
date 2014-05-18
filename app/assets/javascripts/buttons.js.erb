@@ -1,0 +1,152 @@
+$(document).ajaxStart(function () {
+    $('#upload-btn').bind("click", function () {
+        var imgVal = $('#upload_attachment').val();
+        if (imgVal == '') {
+                if ($('#upload_name').val().length > 0) {
+                    if ($('#upload_email').val().length > 0) {
+                        if ($('#upload_massage').val().length > 0) {
+                            $('#new_upload').on('click', '.btn', function () {
+                                $(this).removeClass("btn btn-primary").addClass("btn btn-success");
+                            })
+                            console.log("one");
+                        }
+                    }
+                }
+        } else {
+            if ($('#upload_name').val().length > 0) {
+                if ($('#upload_email').val().length > 0) {
+                    if ($('#upload_massage').val().length > 0) {
+                        $('#new_upload').on('click', '.btn', function () {
+                            $(this).removeClass("btn btn-primary").addClass("btn btn-success");
+                        })
+                        console.log("one");
+                    }
+                }
+            }
+            console.log("two")
+        }
+
+    });
+});
+
+
+
+/// other ///
+//$(document)
+//        .ajaxStart(function () {
+//            if ($('#upload_name').val().length > 0) {
+//                if ($('#upload_email').val().length > 0) {
+//                    if ($('#upload_massage').val().length > 0) {
+//                        $('#new_upload').on('click', '.btn', function () {
+//                            $(this).removeClass("btn btn-primary").addClass( "btn btn-success" );
+//                        })
+//                        console.log("one");
+//                    }
+//                }
+//            }
+//        });
+//
+//
+//$(document).ajaxComplete(function() {
+//    $('#upload-btn').removeClass("btn btn-success").addClass( "btn btn-primary" );
+//    console.log("two");
+//});
+
+
+//$(function() {
+//    $('#loading-indicator').hide();  // hide it initially.
+//    $(document)
+//            .ajaxStart(function() {
+//                c
+//                console.log("one")
+//            })
+//            .ajaxComplete(function() {
+//                $('#upload-btn').removeClass("btn btn-success").addClass( "btn btn-primary" );
+//                console.log("two")
+//
+//            });
+//});
+
+
+//$(document).ready(function () {
+//    $('#upload-btn').bind("click", function () {
+//        var imgVal = $('#upload_attachment').val();
+//        if (imgVal == '') {
+//            $(document).ajaxStart(function () {
+//                if ($('#upload_name').val().length > 0) {
+//                    if ($('#upload_email').val().length > 0) {
+//                        if ($('#upload_massage').val().length > 0) {
+//                            $('#new_upload').on('click', '.btn', function () {
+//                                $(this).removeClass("btn btn-primary").addClass("btn btn-success");
+//                            })
+//                            console.log("one");
+//                        }
+//                    }
+//                }
+//            });
+//            console.log("one")
+//
+//        } else {
+//            console.log("two")
+//
+//        }
+//
+//    });
+//});
+
+
+
+
+
+//$( document ).ajaxSend(function(  ) {
+//    if ( ($("#upload_name").is(":blank")) && ($("#upload_email").is(":blank")) && ($("#upload_massage").is(":blank")) ) {
+//
+//    }
+//    else {
+//        $( ".form-name" ).text( "Triggered ajaxSend handler." );
+//    }
+//});
+
+
+
+
+
+
+//
+//$(document).ready(function () {
+//    $('#new_upload').on('click', '.btn', function () {
+//        $(this).toggleClass('highlighted');
+//    });
+//});
+
+
+
+
+//$( document ).ajaxSend(function(  ) {
+//    $(".btn").removeAttr("disabled").attr('value', 'ORIGINAL BUTTON TEXT').addClass( "btn btn-success" );
+//});
+//
+
+
+//$(document).ajaxSend(function(event, jqxhr, settings) {
+//    if ( settings.url == "uploads" ) {
+//        $( ".form-name" ).text( "Triggered ajaxSend handler." );
+//    }
+//});
+
+
+//$(document).ready(function(){
+//    $(document).on("click", ".btn", function() {
+//        doSomething($(this));
+//    });
+//    function doSomething(btn){
+//        $.ajax({
+//            url: 'uploads',
+//            type: 'GET',
+//            dataType: 'json',
+//            contentType: 'application/json; charset=utf-8'
+//        });
+//    }
+//});
+
+

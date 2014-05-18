@@ -36,7 +36,7 @@
 
     <fieldset>
       <legend class='required'>
-        BAT FORM!!
+        <div class="form-name">BAT FORM!!</div>
       </legend>
       <div class="field">
         <%= f.label :name, :class => 'required' %><br />
@@ -56,6 +56,7 @@
       </div>
     </fieldset>
     <div class="actions">
-      <%= f.submit :data => {:'disable-with' => "Submitting..."} %>
+      <%= f.button  class: "btn btn-primary", id: "upload-btn" %>
     </div>
 <% end %>
+
