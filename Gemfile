@@ -32,7 +32,6 @@ gem 'spring',        group: :development
 gem 'bcrypt', '~> 3.1.7'
 gem 'bcrypt-ruby', '3.1.2'
 
-# Use unicorn as the app server
 # gem 'unicorn'
 
 # Use Capistrano for deployment
@@ -67,7 +66,6 @@ group :production do
   gem 'guard-spork', '1.5.0'
 end
 
-gem "rspec-rails", :group => [:development, :test]
 gem 'growl', '1.0.3'
 gem 'capybara'
 gem 'faker', '1.1.2'
