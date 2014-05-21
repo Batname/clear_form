@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   root 'uploads#index'
 
+  match '/signup',  to: 'users#new',            via: 'get'
   match 'uploads' => 'uploads#create', :via => [:put]
   resources :uploads
   post ':controller/validate', action: 'validate', as: :validate_form
