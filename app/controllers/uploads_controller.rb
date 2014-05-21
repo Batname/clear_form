@@ -15,6 +15,9 @@ class UploadsController < ApplicationController
 
 
   def index
+    @teams = Team.all
+    @services = Service.all
+    @work_categories = WorkCategory.all
     @uploads = Upload.all
     @upload = Upload.new
     #respond_with(@upload, :layout => false)

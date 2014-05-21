@@ -1,5 +1,5 @@
 jQuery ->
-  validate_url = '/uploads/validate'
+  validate_url = 'en/uploads/validate'
 
   $('#new_upload, [id^=edit_upload_]').validate(
 #    debug: true

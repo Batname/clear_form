@@ -7,13 +7,13 @@
       <div class="text_mark"></div>
       <div class="gallery_nav">
         <ul>
-          <li class="branding_li act_gal_nav">BRANDING</li>
-          <li class="web_li">WEB</li>
-          <li class="print_li">PRINT</li>
-          <li class="packing_li">PACKING</li>
-          <li class="arch_li">ARCHITECTURAL DESIGN</li>
-          <li class="apps_li">APPS</li>
-          <li class="gamedev_li">GAMEDEV</li>
+          <li class="branding_li act_gal_nav"><%= @work_categories.find_by_id(1).category %></li>
+          <li class="web_li"><%= @work_categories.find_by_id(2).category %></li>
+          <li class="print_li"><%= @work_categories.find_by_id(3).category %></li>
+          <li class="packing_li"><%= @work_categories.find_by_id(4).category %></li>
+          <li class="arch_li"><%= @work_categories.find_by_id(5).category %></li>
+          <li class="apps_li"><%= @work_categories.find_by_id(6).category %></li>
+          <li class="gamedev_li"><%= @work_categories.find_by_id(7).category %></li>
         </ul>
         <div class="view_li">VIEW ALL</div>
       </div>
@@ -24,20 +24,21 @@
         <div class="nav_branding">
           <div class="item">
             <div>
-              <a href="images/gallery/big/branding/big_branding.jpg">
-                <img src="images/gallery/small/branding/small_branding.jpg">
+              <a href="<%= @work_categories.find_by_id(1).works.find_by_id(1).image %>">
+                <img src="<%= @work_categories.find_by_id(1).works.find_by_id(1).image %>">
               </a>
             </div>
           </div>
         </div>
+
 
         <!-------web--------->
 
         <div class="nav_web">
           <div class="item">
             <div>
-              <a href="images/gallery/big/web/big_web.jpg">
-                <img src="images/gallery/small/web/small_web.jpg">
+              <a href="<%= @work_categories.find_by_id(2).works.find_by_id(2).image %>">
+                <img src="<%= @work_categories.find_by_id(2).works.find_by_id(2).image %>">
               </a>
             </div>
           </div>
@@ -48,8 +49,8 @@
         <div class="nav_print">
           <div class="item">
             <div>
-              <a href="images/gallery/big/print/big_print.jpg">
-                <img src="images/gallery/small/print/small_print.jpg">
+              <a href="<%= @work_categories.find_by_id(3).works.find_by_id(3).image %>">
+                <img src="<%= @work_categories.find_by_id(3).works.find_by_id(3).image %>">
               </a>
             </div>
           </div>
@@ -60,8 +61,8 @@
         <div class="nav_packing">
           <div class="item">
             <div>
-              <a href="images/gallery/big/packing/big_packing.jpg">
-                <img src="images/gallery/small/packing/small_packing.jpg">
+              <a href="<%= @work_categories.find_by_id(4).works.find_by_id(4).image %>">
+                <img src="<%= @work_categories.find_by_id(4).works.find_by_id(4).image %>">
               </a>
             </div>
           </div>
@@ -72,8 +73,8 @@
         <div class="nav_architectural">
           <div class="item">
             <div>
-              <a href="images/gallery/big/architectural/big_arch.jpg">
-                <img src="images/gallery/small/architectural/small_arch.jpg">
+              <a href="<%= @work_categories.find_by_id(5).works.find_by_id(5).image %>">
+                <img src="<%= @work_categories.find_by_id(5).works.find_by_id(5).image %>">
               </a>
             </div>
           </div>
@@ -84,8 +85,8 @@
         <div class="nav_apps">
           <div class="item">
             <div>
-              <a href="images/gallery/big/apps/big_apps.jpg">
-                <img src="images/gallery/small/apps/small_apps.jpg">
+              <a href="<%= @work_categories.find_by_id(6).works.find_by_id(6).image %>">
+                <img src="<%= @work_categories.find_by_id(6).works.find_by_id(6).image %>">
               </a>
             </div>
           </div>
@@ -96,8 +97,8 @@
         <div class="nav_gamedev">
           <div class="item">
             <div>
-              <a href="images/gallery/big/gamedev/big_gamedev.jpg">
-                <img src="images/gallery/small/gamedev/small_gamedev.jpg">
+              <a href="<%= @work_categories.find_by_id(7).works.find_by_id(7).image %>">
+                <img src="<%= @work_categories.find_by_id(7).works.find_by_id(7).image %>">
               </a>
             </div>
           </div>
@@ -109,3 +110,4 @@
     </div>
   </div>
 </div>
+

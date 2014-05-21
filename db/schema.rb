@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150714205352) do
+ActiveRecord::Schema.define(version: 20150714205356) do
+
+  create_table "services", force: true do |t|
+    t.integer  "position"
+    t.string   "title"
+    t.string   "image"
+    t.boolean  "visible"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "teams", force: true do |t|
+    t.integer  "position"
+    t.string   "name"
+    t.string   "image"
+    t.string   "teamclass"
+    t.boolean  "visible"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "uploads", force: true do |t|
     t.string   "name"
@@ -52,5 +73,24 @@ ActiveRecord::Schema.define(version: 20150714205352) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
+
+  create_table "work_categories", force: true do |t|
+    t.string   "category"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "works", force: true do |t|
+    t.integer  "position"
+    t.string   "name"
+    t.string   "image"
+    t.boolean  "visible"
+    t.text     "content"
+    t.integer  "work_category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "works", ["work_category_id"], name: "index_works_on_work_category_id"
 
 end

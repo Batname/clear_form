@@ -35,21 +35,21 @@
         <div id="team">
           <div class="team_left_side">
             <div class="katerina">
-              <span>Name Surname<em>work</em></span>
+              <span><%= @teams.find_by_position(1).name %><em>work</em></span>
               <div class="katerina_mask"></div>
             </div>
             <div class="nikita">
-              <span>Name Surname<em>work</em></span>
+              <span><%= @teams.find_by_position(2).name %><em>work</em></span>
               <div class="nikita_mask"></div>
             </div>
           </div>
           <div class="team_right_side">
             <div class="irina">
-              <span>Name Surname<em>work</em></span>
+              <span><%= @teams.find_by_position(3).name %><em>work</em></span>
               <div class="irina_mask"></div>
             </div>
             <div class="julia">
-              <span>Name Surname<em>work</em></span>
+              <span><%= @teams.find_by_position(4).name %><em>work</em></span>
               <div class="julia_mask"></div>
             </div>
             <div class="joinus">

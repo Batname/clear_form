@@ -850,29 +850,48 @@ body{
     line-height: 80px;
 }
 
-.left_size{
+.social_col{
     float: left;
-    width: 45%;
-    /*border: 1px solid #fff;*/
+    width: 900px;
+    height: 200px;
+    margin: 0 0 0 40px;
 }
 
-.right_size{
-    float: right;
-    width: 45%;
-    /*border: 1px solid #fff;*/
+.social_col ul li a{
+    margin: 44px 0 0 15px;
 }
 
-.right_size ul li a{
-    margin: 15px 0 0 15px;
+.numb_cont{
+    width: 1200px;
+    height: 250px;
+    overflow: hidden;
+    margin: 0 auto;
+    float: left;
+    border-top: 2px solid #112e3f;
 }
 
-.leb_name{
-    color: #196553;
-    font-weight: bold;
+.first_row{
+    height: 22px;
+    /*border: 1px solid #ffffff;*/
+    margin-top: 95px;
+    line-height: 22px;
+    margin-left: 60px;
+    cursor: default;
 }
 
-.leb_name span{
-    color: #000;
-    font-weight: normal;
+.first_row img{
+    position: absolute;
 }
 
+.second_row{
+    height: 22px;
+    /*border: 1px solid #ffffff;*/
+    margin-top: 20px;
+    line-height: 22px;
+    margin-left: 430px;
+    cursor: default;
+}
+
+.second_row img{
+    position: absolute;
+}
