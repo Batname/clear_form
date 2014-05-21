@@ -11,19 +11,40 @@
         <img src="images/form/ok3.png">
       </div>
       <div id="contact_panel">
-        <input class="name_con" type="text" name="name" placeholder="What is your name?">
-        <input class="mail_con" type="email" name="email" placeholder="What is your email adress?">
-        <textarea class="text_con" placeholder="What would you like us to do for you?"></textarea>
-        <form method="post">
-          <div class="buttons">
-            <div class="input_upload" style="width: 276px; height: 103px;">
-              <input type="file" name="file_upload" id="file_upload" size="1" style="-moz-opacity: 0; filter: alpha(opacity=0); opacity: 0; width: 276px; height: 103px">
+        <div id="formid" style="display: none"><%= image_tag ("loading.jpg") %></div>
+        <%= form_for(@upload, :remote => (params[:action] == 'index' ? true : false)) do |f| %>
+
+            <% if @upload.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@upload.errors.count, "error") %> prohibited this upload from being saved:</h2>
+
+                  <ul>
+                    <% @upload.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                  </ul>
+                </div>
+            <% end %>
+
+
+              <div class="field">
+                <%= f.text_field :name, onkeyup: false, class: "form-control name_con", placeholder: 'What is your name?' %>
+              </div>
+              <div class="field">
+                <%= f.text_field :email, onkeyup: false, class: "mail_con form-control", placeholder: 'What is your email adress?'  %>
+              </div>
+              <div class="field">
+                <%= f.text_area :massage, onkeyup: false, class: "text_con form-control", placeholder: 'What is your email adress?'%>
+              </div>
+            <div class="buttons">
+              <div class="input_upload" style="width: 276px; height: 103px;">
+                <%= f.file_field :attachment, id: "file_upload", style: "-moz-opacity: 0; filter: alpha(opacity=0); opacity: 0; width: 276px; height: 103px" %>
+              </div>
+              <div class="input_send" style="width: 276px; height: 103px;">
+              <%= f.button  class: "btn btn-primary", id: "file_send", style: "-moz-opacity: 0; filter: alpha(opacity=0); opacity: 0; width: 276px; height: 103px" %>
+              </div>
             </div>
-            <div class="input_send" style="width: 276px; height: 103px;">
-              <input type="submit" name="file_send" id="file_send" size="1" style="-moz-opacity: 0; filter: alpha(opacity=0); opacity: 0; width: 276px; height: 103px">
-            </div>
-          </div>
-        </form>
+        <% end %>
       </div>
     </div>
     <div id="footer">
@@ -43,3 +64,6 @@
     <div class="second_row"><span style="color: #164d47; font-family: Arial, sans-serif">&#169 2014 TWOK OU . Made with</span><img src="images/heart.png" width="20" style="margin-left: 5px"><span style="margin-left: 30px; color: #164d47; font-family: Arial, sans-serif">in Kyiv, Ukraine</span></div>
   </div>
 </div>
+
+
+

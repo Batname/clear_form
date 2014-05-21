@@ -24,8 +24,21 @@ class UploadsController < ApplicationController
     respond_with do |format|
       format.html { render :layout => ! request.xhr? }
     end
-
   end
+
+  def alluploads
+    if signed_in?
+    @uploads = Upload.all
+    @upload = Upload.new
+    #respond_with(@upload, :layout => false)
+    respond_with do |format|
+      format.html { render :layout => ! request.xhr? }
+    end
+    else
+      redirect_to root_path
+    end
+  end
+
 
   # GET /upload/1
   # GET /upload/1.xml

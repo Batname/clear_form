@@ -1,5 +1,5 @@
 $(document).ajaxStart(function () {
-    $('#upload-btn').bind("click", function () {
+    $('#file_send').bind("click", function () {
         var imgVal = $('#upload_attachment').val();
         if (imgVal == '') {
                 if ($('#upload_name').val().length > 0) {
@@ -48,7 +48,7 @@ $(document).ajaxStart(function () {
 //
 //
 //$(document).ajaxComplete(function() {
-//    $('#upload-btn').removeClass("btn btn-success").addClass( "btn btn-primary" );
+//    $('#file_send').removeClass("btn btn-success").addClass( "btn btn-primary" );
 //    console.log("two");
 //});
 
@@ -61,7 +61,7 @@ $(document).ajaxStart(function () {
 //                console.log("one")
 //            })
 //            .ajaxComplete(function() {
-//                $('#upload-btn').removeClass("btn btn-success").addClass( "btn btn-primary" );
+//                $('#file_send').removeClass("btn btn-success").addClass( "btn btn-primary" );
 //                console.log("two")
 //
 //            });
@@ -69,7 +69,7 @@ $(document).ajaxStart(function () {
 
 
 //$(document).ready(function () {
-//    $('#upload-btn').bind("click", function () {
+//    $('#file_send').bind("click", function () {
 //        var imgVal = $('#upload_attachment').val();
 //        if (imgVal == '') {
 //            $(document).ajaxStart(function () {

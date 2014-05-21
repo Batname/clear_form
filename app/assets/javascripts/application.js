@@ -16,4 +16,5 @@
 //= require turbolinks
 //= require jquery.validate
 //= require jquery.validate.additional-methods
+//= require jquery.scrollTo
 // = require_tree .
