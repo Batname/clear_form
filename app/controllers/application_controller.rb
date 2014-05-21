@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   # protect_from_forgery with: :exception
   protect_from_forgery
   include SessionsHelper
+  before_filter :set_locale
 
 
   def validator(object)
@@ -18,6 +19,17 @@ class ApplicationController < ActionController::Base
       name = t("activerecord.attributes.#{model}.#{field}")
       @errors.map! { |e| "<div class=\"alert-errors\">#{name} #{e}</div>" }
     end
+  end
+
+
+  private
+
+  def set_locale
+    I18n.locale = params[:locale] if params[:locale].present?
+  end
+
+  def default_url_options(option = {})
+    {locale: I18n.locale}
   end
 
 

@@ -1,4 +1,4 @@
-ru:
+es:
   activerecord:
     attributes:
       email:
@@ -14,5 +14,5 @@ ru:
               invalid: "имеет странный формат"
             frequency:
               inclusion: "должна быть в диапазоне от 1 до 7 включительно"
-  team_title_1: "КТО МЫ"
-  team_description_1: "Русский ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  team_title_1: "ЭСТОНЦЫ"
+  team_description_1: "Эстонцы ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."

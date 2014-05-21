@@ -1,31 +1,67 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "sample app", root_path, id: "logo" %>
-      <nav>
-        <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
-          <% if signed_in? %>
-              <li><%= link_to "Users", users_path %></li>
-              <li id="fat-menu" class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Account <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><%= link_to "Profile", current_user %></li>
-                  <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                  <li class="divider">Bat</li>
-                  <li>
-                    <%= link_to "Sign out", signout_path, method: "delete" %>
-                  </li>
-                </ul>
-              </li>
-          <% else %>
-              <li><%= link_to "Sign in", signin_path %></li>
-              <li><%= link_to "Sign Up", signup_path %></li>
-          <% end %>
+<!----------------------------part1/6----------------------------------------------------------------->
+
+<div id="part1">
+  <div id="sec_nav">
+    <div id="part_area">
+      <div id="main_nav_sec">
+        <ul>
+          <li>
+            <div class="top_button_sec">
+              <a href="#p7"><img src="images/top-button_act.png"></a>
+            </div>
+          </li>
+          <li>
+            <div id="menu_nav_sec">
+              <ul>
+                <li><a href="#p2">ABOUT</a></li>
+                <li><a href="#p3">SERVICES</a></li>
+                <li><a href="#p4">WORK</a></li>
+                <li><a href="#p6">CONTACT</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="nav_button_sec"><img src="images/menu-button.png"></div>
+          </li>
         </ul>
-      </nav>
+      </div>
     </div>
+    <div class="nav_shadow"></div>
   </div>
-</header>
+
+  <div id="part_area">
+    <a id="p7"></a>
+
+    <!-----language------------>
+
+    <div id="language">
+      <div class="lang_table">
+        <ul class="lang_tab">
+          <li class="rus_list"><%= link_to_unless_current "ENG", locale: "en"  %>
+            <div class="rus_cont"></div>
+          </a> </li>
+          <li class="eng_list"><%= link_to_unless_current "RUS", locale: "ru"  %>
+            <div class="eng_cont"></div>
+          </li>
+          <li class="est_list"><%= link_to_unless_current "EST", locale: "es" %>
+            <div class="est_cont"></div>
+          </a> </li>
+        </ul>
+      </div>
+    </div>
+
+    <!---------->
+
+    <div id="logo_gab">
+      <div class="logo">
+        <div class="logo-bg"><img src="images/title-bg.png"></div>
+        <img src="images/title.png">
+      </div>
+    </div>
+
+    <!---------->
+    <div class="scroll_down_anim"><img src="images/scroll-down.gif"></div>
+    <!----------->
+
+  </div>
+</div>
