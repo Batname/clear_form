@@ -6,16 +6,14 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
+  <script type="text/javascript">Shadowbox.init();</script>
 
 
   <!--Custom css and js-->
   <meta charset="windows-1251">
   <%= stylesheet_link_tag "style" %>
-  <%= stylesheet_link_tag "shadowbox" %>
-
   <%= javascript_include_tag "script" %>
   <%= javascript_include_tag "jQueryRotateCompressed" %>
-  <%= javascript_include_tag "shadowbox" %>
   <!--Custom css and js-->
 </head>
 <body>

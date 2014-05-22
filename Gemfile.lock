@@ -203,6 +203,8 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
+    shadowbox-rails (0.0.4)
+      sass-rails
     slop (3.5.0)
     spork (1.0.0rc4)
     spork-rails (4.0.0)
@@ -268,6 +270,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   selenium-webdriver
+  shadowbox-rails
   spork-rails (= 4.0.0)
   spring
   sprockets (= 2.11.0)

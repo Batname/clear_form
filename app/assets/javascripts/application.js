@@ -17,4 +17,5 @@
 //= require jquery.validate
 //= require additional-methods
 //= require jquery.scrollTo
-// = require_tree .
+//= require shadowbox
+//= require_tree .

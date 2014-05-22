@@ -76,3 +76,4 @@ gem 'will_paginate', '3.0.5'
 #gem 'jquery-validation-rails'
 gem 'globalize', '~> 4.0.1'
 gem "jquery-scrollto-rails"
+gem 'shadowbox-rails'
