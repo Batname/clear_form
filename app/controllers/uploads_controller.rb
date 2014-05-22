@@ -19,6 +19,7 @@ class UploadsController < ApplicationController
     @services = Service.all
     @work_categories = WorkCategory.all
     @uploads = Upload.all
+    @social_icons = SocialIcon.all
     @upload = Upload.new
     #respond_with(@upload, :layout => false)
     respond_with do |format|

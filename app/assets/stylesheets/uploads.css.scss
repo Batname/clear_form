@@ -4,10 +4,16 @@
 
 
 label.error {
- position: absolute;
- left: 10px;
- background: url(image-path('rails.png')) no-repeat left;
+  position: absolute;
+  margin-left: -645px;
+  background-image: url(image-path('wrong.png'));
+  background-repeat: no-repeat;
+  width:100px;
+  height:100px;
+  display: inline;
+
 }
+
 
 .btn {
   display: inline-block;

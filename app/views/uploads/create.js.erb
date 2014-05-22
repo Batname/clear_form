@@ -3,8 +3,7 @@
 <% end %>
 
 
-$('#file_send').removeClass("btn btn-success").addClass( "btn btn-primary" );
-
+$("#battest").removeClass("input_upload loading_but").addClass("input_upload input_upload_bg");
 
 
 <%= remotipart_response do %>
@@ -27,5 +26,9 @@ $form.prepend($errorDiv.append($errorList));
 <% end %>
 
 
-$('form#new_comment').hide().delay(2000).fadeIn(1000);
-$('div#formid').show().delay(1500).fadeOut(1000);;
+$('form#new_upload').hide().delay(2000).fadeIn(1000);
+$(".ok_panel").fadeIn().delay(1900).fadeOut();
+$(".ok1").fadeIn(300).delay(1600).fadeOut();
+$(".ok2").delay(300).fadeIn(300).delay(1300).fadeOut();
+$(".ok3").delay(600).fadeIn(300).delay(1000).fadeOut();
+$('form#new_upload')[0].reset();

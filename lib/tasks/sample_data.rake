@@ -6,6 +6,7 @@ namespace :db do
     make_services
     make_work_category
     make_work
+    make_social_icon
   end
 end
 
@@ -147,6 +148,31 @@ def make_work
   Work.create!(
       image: "images/gallery/small/branding/small_branding.jpg",
       work_category_id: 7
+  )
+
+end
+
+
+def make_social_icon
+  SocialIcon.create!(
+      scr1: "images/social/twitter-norm.png",
+      scr2: "images/social/twitter-sel.png",
+  )
+  SocialIcon.create!(
+      scr1: "images/social/facebook-norm.png",
+      scr2: "images/social/facebook-sel.png",
+  )
+  SocialIcon.create!(
+      scr1: "images/social/linkedin-norm.png",
+      scr2: "images/social/linkedin-sel.png",
+  )
+  SocialIcon.create!(
+      scr1: "images/social/ball-norm.png",
+      scr2: "images/social/ball-sel.png",
+  )
+  SocialIcon.create!(
+      scr1: "images/social/beh-norm.png",
+      scr2: "images/social/beh-sel.png",
   )
 
 end

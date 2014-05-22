@@ -1,4 +1,4 @@
-<% if signed_in? && !current_page?(root_url) %>
+<% if signed_in? %>
     <div id="part4" style="padding-top: 50px; padding-bottom: 50px;">
       <div id="part_area">
         <div id="work">
@@ -12,8 +12,18 @@
               <th><%= link_to "Show Resumes", resumes_path %></th>
               <th><%= link_to "Sign in", signin_path %></th>
               <th><%= link_to "Sign Up", signup_path %></th>
+              <%=t :team_title_1 %>
             </tr>
           </table>
+        </div>
+        <div id="language">
+          <div class="lang_table">
+            <ul class="lang_tab">
+              <li><%= link_to_unless_current "ENG", locale: "en"  %></li>
+              <li><%= link_to_unless_current "RUS", locale: "ru"  %></li>
+              <li><%= link_to_unless_current "EST", locale: "es" %></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -30,7 +40,7 @@
         <ul>
           <li>
             <div class="top_button_sec">
-              <a href="#p7"><img src="/images/top-button_act.png"></a>
+              <a href="#p7"><%= image_tag "top-button_act.png" %></a>
             </div>
           </li>
           <li>
@@ -44,7 +54,7 @@
             </div>
           </li>
           <li>
-            <div class="nav_button_sec"><img src="images/menu-button.png"></div>
+            <div class="nav_button_sec"><%= image_tag "menu-button.png" %></div>
           </li>
         </ul>
       </div>
@@ -64,7 +74,7 @@
           <li class="rus_list">
             <% if I18n.locale == :ru %>
             <% else %>
-                <%= link_to('ru', data: { no_turbolink: true }) do %>
+                <%= link_to('?locale=ru', data: { no_turbolink: true }) do %>
                     <div class="rus_cont"></div>
                 <% end %>
             <% end %>
@@ -72,7 +82,7 @@
           <li class="eng_list">
             <% if I18n.locale == :en %>
             <% else %>
-                <%= link_to('en', data: { no_turbolink: true }) do %>
+                <%= link_to('?locale=en', data: { no_turbolink: true }) do %>
                     <div class="eng_cont"></div>
                 <% end %>
             <% end %>
@@ -80,7 +90,7 @@
           <li class="est_list">
             <% if I18n.locale == :es %>
             <% else %>
-                <%= link_to('es', data: { no_turbolink: true }) do %>
+                <%= link_to('?locale=es', data: { no_turbolink: true }) do %>
                     <div class="est_cont"></div>
                 <% end %>
             <% end %>
@@ -90,21 +100,18 @@
     </div>
 
     <!---------->
-    <% if current_page?(root_url) %>
         <div id="logo_gab">
           <div class="logo">
-            <div class="logo-bg"><img src="images/title-bg.png"></div>
-            <img src="images/title.png">
+            <div class="logo-bg"><%= image_tag "title-bg.png" %></div>
+            <%= image_tag "title.png" %>
           </div>
         </div>
 
 
     <!---------->
-    <div class="scroll_down_anim"><img src="images/scroll-down.gif"></div>
+    <div class="scroll_down_anim"><%= image_tag "scroll-down.gif" %></div>
     <!----------->
-    <% else %>
 
-    <% end %>
   </div>
 </div>
 <% end %>

@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
       @errors = true
     else
       name = t("activerecord.attributes.#{model}.#{field}")
-      @errors.map! { |e| "<div class=\"alert-errors\">#{name} #{e}</div>" }
+      @errors.map! { |e| "#{name} #{e}" }
     end
   end
 

@@ -1,5 +1,5 @@
 jQuery ->
-  validate_url = 'en/uploads/validate'
+  validate_url = 'uploads/validate'
 
   $('#new_upload, [id^=edit_upload_]').validate(
 #    debug: true
@@ -10,6 +10,7 @@ jQuery ->
           url: validate_url
           type: 'post'
       'upload[email]':
+        required: true
         remote:
           url: validate_url
           type: 'post'
@@ -19,3 +20,4 @@ jQuery ->
           url: validate_url
           type: 'post'
   )
+

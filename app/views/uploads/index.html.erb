@@ -1,13 +1,15 @@
 <% provide(:title, 'Home') %>
 
-
+<% if signed_in? %>
+    <%= render 'uploads/homeform' %>
+<% else %>
 
 <%= render 'uploads/team' %>
 <%= render 'uploads/services' %>
 <%= render 'uploads/work' %>
 <%= render 'uploads/sayhello' %>
 <%= render 'uploads/homeform' %>
-
+<% end %>
 
 
 

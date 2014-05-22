@@ -3,12 +3,12 @@
 <div id="part6">
   <div id="part_area">
     <div id="contact">
-      <div class="arrow"><img src="images/arrow_green.png" width="30"></div>
+      <div class="arrow"><%= image_tag "arrow_green.png", {width: 30} %></div>
       <a id="p6"></a>
       <div class="ok_panel">
-        <img src="images/form/ok1.png">
-        <img src="images/form/ok2.png">
-        <img src="images/form/ok3.png">
+        <%= image_tag "/images/form/ok1.png", class: "ok1" %>
+        <%= image_tag "/images/form/ok2.png", class: "ok2" %>
+        <%= image_tag "/images/form/ok3.png", class: "ok3" %>
       </div>
       <div id="contact_panel">
         <div id="formid" style="display: none"><%= image_tag ("loading.jpg") %></div>
@@ -37,7 +37,7 @@
                 <%= f.text_area :massage, onkeyup: false, class: "text_con form-control", placeholder: 'What is your email adress?'%>
               </div>
             <div class="buttons">
-              <div class="input_upload" style="width: 276px; height: 103px;">
+              <div id="battest" class="input_upload input_upload_bg" style="width: 276px; height: 103px;">
                 <%= f.file_field :attachment, id: "file_upload", style: "-moz-opacity: 0; filter: alpha(opacity=0); opacity: 0; width: 276px; height: 103px" %>
               </div>
               <div class="input_send" style="width: 276px; height: 103px;">
@@ -47,23 +47,5 @@
         <% end %>
       </div>
     </div>
-    <div id="footer">
-      <div class="social_col">
-        <ul>
-          <li><a href="#"><img src="images/social/twitter-norm.png" width="115" onmouseover="this .src='images/social/twitter-sel.png'; this .width=115; this .height=115" onmouseout="this .src='images/social/twitter-norm.png'; this .width=115; this .height=115"></a> </li>
-          <li><a href="#"><img src="images/social/facebook-norm.png" width="115" onmouseover="this .src='images/social/facebook-sel.png'; this .width=115; this .height=115" onmouseout="this .src='images/social/facebook-norm.png'; this .width=115; this .height=115"></a> </li>
-          <li><a href="#"><img src="images/social/linkedin-norm.png" width="115" onmouseover="this .src='images/social/linkedin-sel.png'; this .width=115; this .height=115" onmouseout="this .src='images/social/linkedin-norm.png'; this .width=115; this .height=115"></a> </li>
-          <li><a href="#"><img src="images/social/ball-norm.png" width="115" onmouseover="this .src='images/social/ball-sel.png'; this .width=115; this .height=115" onmouseout="this .src='images/social/ball-norm.png'; this .width=115; this .height=115"></a> </li>
-          <li><a href="#"><img src="images/social/beh-norm.png" width="115" onmouseover="this .src='images/social/beh-sel.png'; this .width=115; this .height=115" onmouseout="this .src='images/social/beh-norm.png'; this .width=115; this .height=115"></a> </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="numb_cont">
-    <div class="first_row"><img src="images/point.png" width="20" style="margin-left: 220px"><span style="margin-left: 250px; color: #164d47; font-family: Arial, sans-serif">Muhu Str. 1-99, Tallinn, Estonia, 13912</span><img src="images/phone.png" width="16" style="margin-left: 20px"><span style="margin-left: 50px; color: #164d47; font-family: Arial, sans-serif">+37258052608, +37258741191, +79650691769</span></div>
-    <div class="second_row"><span style="color: #164d47; font-family: Arial, sans-serif">&#169 2014 TWOK OU . Made with</span><img src="images/heart.png" width="20" style="margin-left: 5px"><span style="margin-left: 30px; color: #164d47; font-family: Arial, sans-serif">in Kyiv, Ukraine</span></div>
   </div>
 </div>
-
-
-

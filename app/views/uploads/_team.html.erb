@@ -2,7 +2,7 @@
 
 <div id="part2">
   <div id="part_area">
-    <div class="arrow"><img src="images/arrow_top.png" width="30"></div>
+    <div class="arrow"><%= image_tag "arrow_top.png", {width: 30} %></div>
     <a id="p2"></a>
 
     <!---------->
@@ -54,8 +54,8 @@
             </div>
             <div class="joinus">
               <a href="#p6">
-                <img class="front_join" src="images/team/join.jpg">
-                <img class="back_join" src="images/team/join_back.jpg">
+                <%= image_tag "/images/team/join.jpg", class: "front_join" %>
+                <%= image_tag "/images/team/join_back.jpg", class: "back_join" %>
               </a>
             </div>
           </div>

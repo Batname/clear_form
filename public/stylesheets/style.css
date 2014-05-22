@@ -729,6 +729,11 @@ body{
     position: absolute;
 }
 
+.ok1, .ok2, .ok3{
+    display: none;
+}
+
+
 #contact_panel{
     width: 900px;
     margin: 85px auto;
@@ -808,10 +813,14 @@ body{
 
 .input_upload{
     float: left;
-    background: url("../images/form/upload.png") no-repeat center;
     cursor: pointer;
     display: block;
 }
+
+.input_upload_bg{
+  background: url("../images/form/upload.png") no-repeat center;
+}
+
 
 .input_upload:hover{
     background: url("../images/uploaded.png") no-repeat center;

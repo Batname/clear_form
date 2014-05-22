@@ -73,6 +73,6 @@ gem 'sprockets', '2.11.0'
 gem 'will_paginate', '3.0.5'
 
 
-gem 'jquery-validation-rails'
+#gem 'jquery-validation-rails'
 gem 'globalize', '~> 4.0.1'
 gem "jquery-scrollto-rails"

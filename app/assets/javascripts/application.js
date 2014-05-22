@@ -15,6 +15,6 @@
 //= require jquery.remotipart
 //= require turbolinks
 //= require jquery.validate
-//= require jquery.validate.additional-methods
+//= require additional-methods
 //= require jquery.scrollTo
 // = require_tree .

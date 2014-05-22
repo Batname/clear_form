@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
+  # scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
 
     root 'uploads#index'
     resources :uploads
@@ -14,10 +14,10 @@ Rails.application.routes.draw do
     match 'uploads' => 'uploads#create', :via => [:put]
 
     post ':controller/validate', action: 'validate', as: :validate_form
-  end
+  # end
 
   #match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), via: :get
-  match '', to: redirect("/#{I18n.default_locale}"), via: :get
+  # match '', to: redirect("/#{I18n.default_locale}"), via: :get
 
 
 end

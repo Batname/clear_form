@@ -1,12 +1,15 @@
 $(document).ajaxStart(function () {
+
+
+
     $('#file_send').bind("click", function () {
-        var imgVal = $('#upload_attachment').val();
+        var imgVal = $('#file_upload').val();
         if (imgVal == '') {
                 if ($('#upload_name').val().length > 0) {
                     if ($('#upload_email').val().length > 0) {
                         if ($('#upload_massage').val().length > 0) {
                             $('#new_upload').on('click', '.btn', function () {
-                                $(this).removeClass("btn btn-primary").addClass("btn btn-success");
+                                $("#battest").removeClass("input_upload input_upload_bg").addClass("input_upload loading_but");
                             })
                             console.log("one");
                         }
@@ -17,7 +20,7 @@ $(document).ajaxStart(function () {
                 if ($('#upload_email').val().length > 0) {
                     if ($('#upload_massage').val().length > 0) {
                         $('#new_upload').on('click', '.btn', function () {
-                            $(this).removeClass("btn btn-primary").addClass("btn btn-success");
+                            $("#battest").removeClass("input_upload input_upload_bg").addClass("input_upload loading_but");
                         })
                         console.log("one");
                     }
