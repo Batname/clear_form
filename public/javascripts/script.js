@@ -68,18 +68,18 @@ $(document).ready(function(){
         });
 
 
-    $(function(){
-        $("#file_upload").click(function(){
-            $("#file_upload").change(function(){
-                var uploaded = $("#file_upload"), upfile = $(".input_upload");
-                if(uploaded == 0){
-                    upfile.css('backgroundImage','url(images/form/upload.png)');
-                }else{
-                    upfile.css('backgroundImage','url(images/uploaded.png)');
-                };
-            });
-        });
-    });
+//    $(function(){
+//        $("#file_upload").click(function(){
+//            $("#file_upload").change(function(){
+//                var uploaded = $("#file_upload"), upfile = $(".input_upload");
+//                if(uploaded == 0){
+//                    upfile.css('backgroundImage','url(images/form/upload.png)');
+//                }else{
+//                    upfile.css('backgroundImage','url(images/uploaded.png)');
+//                };
+//            });
+//        });
+//    });
 
     //script for service
 
