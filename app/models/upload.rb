@@ -9,8 +9,8 @@ class Upload < ActiveRecord::Base
 
   has_attached_file :attachment
   has_attached_file :other_attachment
-  validates :name, presence: true, length: {  maximum: 100, }
-  validates :massage, presence: true, length: {  maximum: 300, }
+  validates :name, presence: true, length: { maximum: 100, }
+  validates :massage, presence: true, length: { maximum: 300, }
   validates :email, presence: true,
             format: { with: VALID_EMAIL_REGEX }
 
