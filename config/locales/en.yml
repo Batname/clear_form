@@ -23,7 +23,7 @@ en:
   activerecord:
     attributes:
       upload:
-        email: "Email"
+        email: ""
         name: "Name"
         massage: "Massage"
     errors:
@@ -31,9 +31,9 @@ en:
         upload:
           attributes:
             email:
-              blank: "Blank"
-              taken: "Taken"
-              invalid: "Invalid"
+              blank: ""
+              taken: ""
+              invalid: ""
             name:
               blank: "должна быть в диапазоне от 1 до 7 включительно"
             massage:

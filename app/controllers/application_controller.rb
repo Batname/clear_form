@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
 
     if @errors.empty?
       @errors = true
+      data = {:message => "Alert this!"}
     else
       name = t("activerecord.attributes.#{model}.#{field}")
       @errors.map! { |e| "#{name} #{e}" }

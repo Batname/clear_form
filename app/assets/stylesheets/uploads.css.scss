@@ -5,16 +5,20 @@
 
 @import 'shadowbox';
 
-label.error {
+.field label.error {
   position: absolute;
-  margin-left: -645px;
+  margin-left: 75px;
   background-image: url(image-path('wrong.png'));
   background-repeat: no-repeat;
   width:100px;
   height:100px;
-  display: inline;
+  display: block;
+  margin-top: -67px;
 
 }
+
+
+
 
 
 .btn {
