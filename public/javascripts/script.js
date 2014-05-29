@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 
     $(".logo").animate({opacity: 1}, 3000);
-    $(".back_join").css({width: "0", height: "196px"});
+    $(".back_join").css({width: "0", height: "196px", left: "125px"});
 
     var secondary_nav = $("#sec_nav"), nav_shadow = $(".nav_shadow");
 
@@ -31,55 +31,55 @@ $(document).ready(function(){
         $(".katerina span").stop(1, 1).animate({"top":"0"}, 900);
         $(".katerina_mask").stop(1, 1).animate({"background-position":"0%"}, 500);
     }).mouseleave(function(){
-            $(".katerina span").stop(1, 1).animate({"top":"100px"}, 300);
-            $(".katerina_mask").stop(1, 1).animate({"background-position":"100%"}, 500);
-        });
+        $(".katerina span").stop(1, 1).animate({"top":"100px"}, 300);
+        $(".katerina_mask").stop(1, 1).animate({"background-position":"100%"}, 500);
+    });
 
     $(".nikita").mouseenter(function(){
         $(".nikita span").stop(1, 1).animate({"top":"0"}, 900);
         $(".nikita_mask").stop(1, 1).animate({"background-position":"0%"}, 500);
     }).mouseleave(function(){
-            $(".nikita span").stop(1, 1).animate({"top":"100px"}, 300);
-            $(".nikita_mask").stop(1, 1).animate({"background-position":"100%"}, 500);
-        });
+        $(".nikita span").stop(1, 1).animate({"top":"100px"}, 300);
+        $(".nikita_mask").stop(1, 1).animate({"background-position":"100%"}, 500);
+    });
 
     $(".irina").mouseenter(function(){
         $(".irina span").stop(1, 1).animate({"top":"0"}, 900);
         $(".irina_mask").stop(1, 1).animate({"background-position":"100%"}, 500);
     }).mouseleave(function(){
-            $(".irina span").stop(1, 1).animate({"top":"100px"}, 300);
-            $(".irina_mask").stop(1, 1).animate({"background-position":"0%"}, 500);
-        });
+        $(".irina span").stop(1, 1).animate({"top":"100px"}, 300);
+        $(".irina_mask").stop(1, 1).animate({"background-position":"0%"}, 500);
+    });
 
     $(".julia").mouseenter(function(){
         $(".julia span").stop(1, 1).animate({"top":"0"}, 900);
         $(".julia_mask").stop(1, 1).animate({"background-position":"100%"}, 500);
     }).mouseleave(function(){
-            $(".julia span").stop(1, 1).animate({"top":"100px"}, 300);
-            $(".julia_mask").stop(1, 1).animate({"background-position":"0%"}, 500);
-        });
+        $(".julia span").stop(1, 1).animate({"top":"100px"}, 300);
+        $(".julia_mask").stop(1, 1).animate({"background-position":"0%"}, 500);
+    });
 
     $(".joinus").mouseenter(function(){
-        $(".front_join").stop(1, 1).animate({width: "0", height: "196px"}, 200);
-        $(".back_join").stop(1, 1).delay(200).animate({width: "251px", height: "196px"}, 200);
+        $(".front_join").stop(1, 1).animate({width: "0", height: "196px", left: "125px"}, 200).fadeOut(0);
+        $(".back_join").stop(1, 1).delay(200).animate({width: "251px", height: "196px", left: "0"}, 200);
     }).mouseleave(function(){
-            $(".front_join").stop(1, 1).delay(200).animate({width: "251px", height: "196px"}, 200);
-            $(".back_join").stop(1, 1).animate({width: "0", height: "196px"}, 200);
-        });
+        $(".front_join").stop(1, 1).delay(200).fadeIn(0).animate({width: "251px", height: "196px", left: "0"}, 200);
+        $(".back_join").stop(1, 1).animate({width: "0", height: "196px", left: "125px"}, 200);
+    });
 
 
-//    $(function(){
-//        $("#file_upload").click(function(){
-//            $("#file_upload").change(function(){
-//                var uploaded = $("#file_upload"), upfile = $(".input_upload");
-//                if(uploaded == 0){
-//                    upfile.css('backgroundImage','url(images/form/upload.png)');
-//                }else{
-//                    upfile.css('backgroundImage','url(images/uploaded.png)');
-//                };
-//            });
-//        });
-//    });
+    //$(function(){
+    //$("#file_upload").click(function(){
+    //$("#file_upload").change(function(){
+    //var uploaded = $("#file_upload"), upfile = $(".input_upload");
+    //if(uploaded == 0){
+    //upfile.css('backgroundImage','url(images/form/upload.png)');
+    //}else{
+    //upfile.css('backgroundImage','url(images/uploaded.png)');
+    //};
+    //});
+    //});
+    //});
 
     //script for service
 

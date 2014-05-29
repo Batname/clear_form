@@ -4,6 +4,7 @@
     outline: none;
 }
 
+
 a{
     text-decoration: none;
 }
@@ -14,16 +15,18 @@ ul{
 
 h2, h3{
     color: #ededed;
-    padding: 35px 0 0 0;
+    font-weight: lighter;
 }
 
 p{
     color: #ededed;
+    text-align: justify;
 }
 
 body{
     background: #282828;
-    font: 15px Arial, Tahoma, sans-serif;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 15px;
 }
 
 /*------------------------------------------------------------------------------------------------------------------*/
@@ -58,14 +61,22 @@ body{
     background: #fdb53f;
     display: none;
     position: fixed;
-    z-index: 9999;
+    z-index: 9998;
+    height: 50px;
+    /*border: 1px solid #fff;*/
 }
 
 .nav_shadow{
-    overflow: hidden;
     height: 5px;
-    background: #112e3f;
-    width: 100%;
+    width: 1200px;
+    background: #112e3e;
+    overflow: hidden;
+    /*border: 1px solid #fff;*/
+    z-index: 9999;
+    margin-top: 50px;
+    position: fixed;
+    display: none;
+    opacity: 0.4;
 }
 
 #main_nav_sec{
@@ -77,30 +88,28 @@ body{
 
 #main_nav_sec ul li{
     float: left;
-    height: 40px;
-    line-height: 40px;
+    height: 50px;
+    line-height: 50px;
 }
 
 #menu_nav_sec ul li a{
     padding: 0 6px;
     display: block;
     color: #af893f;
-    font-weight: bold;
     font-size: 17px;
 }
 
 .nav_button_sec{
-    margin: 3px 10px 0 15px;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
+    margin: 0 0 0 15px;
+    width: 50px;
+    height: 50px;
 }
 
 .top_button_sec{
-    margin: 3px 10px 0 15px;
+    margin: 6px 10px 0 0;
     width: 35px;
     height: 35px;
-    padding-right: 650px;
+    padding-right: 670px;
     opacity: 0.7;
 }
 
@@ -117,15 +126,16 @@ body{
 /*------------------------------------------------------------------------------------*/
 
 #logo_gab{
-    width: 1240px;
+    width: 1325px;
     margin: 0 auto;
     /*border: 1px solid #fff;*/
     position: relative;
+    right: 62px;
 }
 
 .logo{
     margin: 0 auto;
-    width: 800px;
+    width: 850px;
     height: auto;
     /*border: 1px solid #fff;*/
     opacity: 0.1;
@@ -239,30 +249,62 @@ body{
     background: #e94c3d;
     overflow: hidden;
     /*border: 1px solid #fff;*/
+    padding-bottom: 100px;
 }
 
-.arrow{
-    text-align: center;
+.arrow_black{
+    margin: 0 auto;
+    margin-bottom: 70px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../images/arrow_top.png") no-repeat top center;
+    /*border: 1px solid #fff;*/
+    padding: 0;
+    overflow: hidden;
+}
+
+.arrow_red{
+    margin: 0 auto;
+    margin-bottom: 70px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../images/arrow_buttom.png") no-repeat top center;
+    /*border: 1px solid #fff;*/
+    padding: 0;
+    overflow: hidden;
+}
+
+.arrow_green{
+    margin: 0 auto;
+    margin-bottom: 70px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../images/arrow_green.png") no-repeat top center;
+    /*border: 1px solid #fff;*/
+    padding: 0;
+    overflow: hidden;
 }
 
 /*------------------------------------------------*/
 
 #about{
-    width: 1080px;
+    width: 1090px;
     /*border: 1px solid #fff;*/
-    margin: 60px auto;
+    margin: 0 55px;
     overflow: hidden;
 }
 
 #left_col{
-    width: 48%;
+    width: 520px;
     float: left;
 }
 
 #right_col{
-    width: 47%;
+    width: 520px;
     float: right;
-    margin-bottom: 100px;
 }
 
 .con_about{
@@ -302,7 +344,7 @@ body{
 .katerina span{
     position: absolute;
     color: #ededed;
-    margin: 320px 0 0 70px;
+    margin: 320px 0 0 40px;
     font-size: 18px;
     top: 100px;
     z-index: 10;
@@ -374,7 +416,7 @@ body{
 .nikita span, .irina span, .julia span{
     position: absolute;
     color: #ededed;
-    margin: 120px 0 0 70px;
+    margin: 120px 0 0 60px;
     font-size: 18px;
     top: 100px;
     z-index: 6;
@@ -387,8 +429,8 @@ body{
 .text_mark{
     background-color: #ededed;
     width: 60px;
-    height: 3px;
-    margin: 5px 0 35px 0;
+    height: 2px;
+    margin: 5px 0 50px 0;
 }
 
 /*----------------------------------------------------*/
@@ -408,7 +450,7 @@ body{
 }
 
 .back_join{
-
+    position: relative;
 }
 
 
@@ -418,15 +460,19 @@ body{
     background: #112e3f;
     overflow: hidden;
     /*border: 1px solid #fff;*/
+    padding-bottom: 100px;
 }
 
 #services{
-    width: 1050px;
+    width: 1090px;
     margin: 0 auto;
+    /*border: 1px solid #fff;*/
 }
 
 #headservicecontainer{
     overflow: hidden;
+    /*border: 1px solid #fff;*/
+    padding-left: 21px;
 }
 
 .li1, .li2, .li3, .li4{
@@ -462,7 +508,6 @@ body{
 }
 
 .your_image:hover, .your_amusement:hover, .your_comfort:hover, .your_productivity:hover{
-    background: url("../images/serpic-active.png") no-repeat top;
     color: #fdb53f;
 }
 
@@ -471,7 +516,6 @@ body{
 }
 
 .service_active{
-    background: url("../images/serpic-sel.png") no-repeat top;
     color: #fdb53f;
 }
 
@@ -479,6 +523,11 @@ body{
     background: url("../images/serpic-norm.png") no-repeat top;
     color: #7b6b3f;
 }
+
+.service_normal:hover{
+    background: url("../images/serpic-active.png") no-repeat top;
+}
+
 
 .your_amusement{
     text-align: center;
@@ -509,7 +558,7 @@ body{
     float: left;
     width: 48%;
     /*border: 1px solid #ffffff;*/
-    padding-top: 65px;
+    padding-top: 105px;
     position: relative;
     right: 600px;
 }
@@ -518,8 +567,7 @@ body{
     float: right;
     width: 48%;
     /*border: 1px solid #ffffff;*/
-    padding-bottom: 60px;
-    padding-top: 60px;
+    padding-top: 100px;
     position: relative;
     left: 600px;
 }
@@ -536,7 +584,7 @@ body{
     float: left;
     width: 48%;
     /*border: 1px solid #ffffff;*/
-    padding-top: 145px;
+    padding-top: 185px;
     position: relative;
     right: 600px;
 }
@@ -545,8 +593,7 @@ body{
     float: right;
     width: 48%;
     /*border: 1px solid #ffffff;*/
-    padding-bottom: 60px;
-    padding-top: 60px;
+    padding-top: 100px;
     position: relative;
     left: 600px;
 }
@@ -563,7 +610,7 @@ body{
     float: left;
     width: 48%;
     /*border: 1px solid #ffffff;*/
-    padding-top: 115px;
+    padding-top: 155px;
     position: relative;
     right: 600px;
 }
@@ -572,8 +619,7 @@ body{
     float: right;
     width: 48%;
     /*border: 1px solid #ffffff;*/
-    padding-bottom: 60px;
-    padding-top: 60px;
+    padding-top: 100px;
     position: relative;
     left: 600px;
 }
@@ -586,7 +632,7 @@ body{
     float: left;
     width: 48%;
     /*border: 1px solid #ffffff;*/
-    padding-top: 115px;
+    padding-top: 155px;
     position: relative;
 }
 
@@ -594,8 +640,7 @@ body{
     float: right;
     width: 48%;
     /*border: 1px solid #ffffff;*/
-    padding-bottom: 60px;
-    padding-top: 60px;
+    padding-top: 100px;
     position: relative;
 }
 
@@ -618,10 +663,11 @@ body{
     background: #0e2532;
     overflow: hidden;
     /*border: 1px solid #fff;*/
+    padding-bottom: 100px;
 }
 
 #work{
-    width: 1050px;
+    width: 1090px;
     margin: 0 auto;
     /*border: 1px solid #fff;*/
 }
@@ -630,7 +676,6 @@ body{
     /*border: 1px solid #fff;*/
     overflow: hidden;
     float: left;
-    padding-bottom: 80px;
 }
 
 .gallery_nav{
@@ -660,7 +705,6 @@ body{
     cursor: pointer;
     color: #786336;
     font-size: 13px;
-    font-weight: bold;
 }
 
 .branding_li:hover, .web_li:hover, .print_li:hover, .packing_li:hover, .arch_li:hover, .apps_li:hover, .gamedev_li:hover, .view_li:hover{
@@ -695,10 +739,11 @@ body{
 }
 
 .green_line{
-    height: 60px;
+    height: 150px;
     text-align: center;
-    line-height: 60px;
+    line-height: 150px;
     color: #fff;
+    font-size: 23px;
 }
 
 /*------------------------part 6------------------------------*/
@@ -710,7 +755,7 @@ body{
 }
 
 #contact{
-    border-bottom: 2px solid #112e3f;
+    border-bottom: 1px solid #112e3f;
     overflow: hidden;
 }
 
@@ -729,16 +774,12 @@ body{
     position: absolute;
 }
 
-.ok1, .ok2, .ok3{
-    display: none;
-}
-
-
 #contact_panel{
     width: 900px;
-    margin: 85px auto;
+    margin: 0 auto;
     /*border: 1px solid #fff;*/
     overflow: hidden;
+    padding-bottom: 100px;
 }
 
 .name_con{
@@ -813,14 +854,10 @@ body{
 
 .input_upload{
     float: left;
+    background: url("../images/form/upload.png") no-repeat center;
     cursor: pointer;
     display: block;
 }
-
-.input_upload_bg{
-  background: url("../images/form/upload.png") no-repeat center;
-}
-
 
 .input_upload:hover{
     background: url("../images/uploaded.png") no-repeat center;
